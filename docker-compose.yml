@@ -1,0 +1,9 @@
+version: "3"
+services:
+  app:
+    build: .
+    volumes:
+      - ./:/go/src/app
+    ports:
+      - "80:80"
+    privileged: true # Delveで必要なので付与。セキュリティ面から本番環境では使うべきではない。 
